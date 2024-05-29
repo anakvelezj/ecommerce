@@ -1,0 +1,62 @@
+/* Estilos para el contenedor principal */
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  align-content: space-between;
+  margin-top: 2rem;
+  margin-left: 15rem;
+}
+
+/* Estilos para la sección de la imagen grande */
+.large-image {
+  flex: 1;
+  width: 50%; /* Tamaño deseado para la imagen grande */
+  margin-bottom: 20px; /* Espacio entre la imagen grande y la descripción */
+}
+
+/* Estilos para la sección de información del artículo */
+.item-info {
+  width: 70%; /* Tamaño deseado para la información */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilos para la sección de las imágenes pequeñas */
+.small-images {
+  width: 50%; /* Tamaño deseado para las imágenes pequeñas */
+  display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes se envuelvan en varias líneas */
+  justify-content: space-between; /* Distribuye las imágenes uniformemente */
+}
+
+/* Estilos para las imágenes grandes y pequeñas */
+.large-image img,
+.small-image img {
+  max-width: 80%; /* Ajusta el tamaño máximo de las imágenes */
+  height: auto;
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity button {
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.quantity button:hover {
+  background-color: #0056b3; 
+}
+
+.quantity span {
+  font-size: 18px;
+  margin: 0 10px; 
+}

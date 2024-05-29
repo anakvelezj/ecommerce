@@ -1,0 +1,26 @@
+<div *ngIf="product$ | async as product">
+  <ng-container *ngIf="product; else emptyProduct">
+    <div class="item-container" *ngIf="product.detail">
+      <div class="large-image">
+        <img [src]="product.detail.picture" alt="{{ product.name }}">
+      </div>
+      <div class="item-info">
+        <h2 class="item-title">{{ product.name }}</h2>
+        <p class="item-description">{{ product.detail.description }}</p>
+        <p class="item-price">{{ product.detail.price  | currencyFormat:'COP$':',':'.' }}</p>
+        <button (click)="decreaseQuantity()">-</button>
+        <span>{{ quantity }}</span>
+        <button (click)="increaseQuantity()">+</button>
+        <button class="add-to-cart-btn" (click)="addProductToCart(product)">Add to Cart</button>
+      </div>
+      <div class="small-images">
+        <div class="small-image" *ngFor="let image of product.detail.pictureThumbnails">
+          <img [src]="image" alt="{{ product.name }}">
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #emptyProduct>
+    <p>Product Empty</p>
+  </ng-template>
+</div>

@@ -1,0 +1,11 @@
+<section class ="products">
+    <div class="products-grid">
+      <div *ngIf="loading">
+        <div class="spinner"></div>
+      </div>
+      <div *ngFor="let product of products; trackBy: trackByProductIndex" class="product-item">
+        <app-product-item [product]="product" (addToCart)="onAddToCart($event)"></app-product-item>
+      </div>
+    </div>
+  </section>
+

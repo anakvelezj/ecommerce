@@ -1,0 +1,41 @@
+
+.product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-info img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .product-details {
+    flex-grow: 1;
+  }
+  
+  .product-name {
+    font-weight: bold;
+  }
+  
+  .product-price {
+    margin-left: auto;
+  }
+  
+  .product-button {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 1.5rem;
+  
+    .icon {
+      width: 10px; 
+      height: 10px;
+    }
+  }
+  
+  .product-button:hover {
+    background-color: #adc6e0;
+  }
+  
+  

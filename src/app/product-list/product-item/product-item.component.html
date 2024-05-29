@@ -1,0 +1,11 @@
+<div class="product-info">
+    <img [src]="product.detail.picture" alt="name"  (click)="goToProductDetail(product.id)">
+    <div class="product-details">
+      <div class="product-name">{{ product.name }}</div>
+    </div>
+    <div class="product-price">{{ product.detail.price | currencyFormat:'COP$':',':'.' }}
+    <button class="product-button" (click)="onAddToCart()">
+      <img src="assets/icon-plus.svg" alt="Agregar" class="icon">
+    </button>
+    </div>
+  </div>

@@ -1,0 +1,29 @@
+<div class="cart-modal" *ngIf="items$ | async as cartData">
+  <ng-container *ngIf="cartData.length > 0; else emptyCartContent">
+    <div *ngFor="let item of cartData" class="image-modal">
+      <p>{{ item.name }}</p>
+      <p>{{ item.detail?.price  | currencyFormat:'COP$':',':'.' }}</p>
+      <p>Quantity: {{ item.quantity }}</p> 
+      <img *ngIf="item.id" src="assets/icon-delete.svg" alt="del" (click)="removeFromCart(item.id)">
+    </div>
+    <button (click)="clearCart()">Clear Cart</button>
+    <button (click)="openModal()">Buy</button>
+  </ng-container>
+</div>
+<app-modal [modalOpen]="modalOpen" (closeModal)="closeModal()">
+  <div class="modal-header">
+    <h2>Confirmation</h2>
+  </div>
+  <div class="modal-body">
+    <p>Are you sure you want to buy these products?</p>
+  </div>
+  <div class="modal-footer">
+    <button (click)="confirmPurchase()">Save</button>
+    <button (click)="closeModal()">Cancel</button>
+  </div>
+</app-modal>
+
+
+<ng-template #emptyCartContent>
+  <p>No items in the cart</p>
+</ng-template>

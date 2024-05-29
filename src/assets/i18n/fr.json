@@ -1,0 +1,13 @@
+{
+  "HEADER": {
+    "TITLE": "sneakers",
+    "MENU1": "Collections",
+    "MENU2": "Hommes",
+    "MENU3": "Femmes",
+    "MENU4": "À propos",
+    "MENU5": "Contact"
+  },
+  "HOME": {
+    "SELECT": "Changer de langue"
+  }
+}
